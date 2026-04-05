@@ -9,8 +9,47 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        surface: {
+          DEFAULT: "#0e0929",
+          low: "#130e31",
+          container: "#19143a",
+          high: "#1f1943",
+          highest: "#261f4d",
+          bright: "#2c2556",
+        },
+        primary: {
+          DEFAULT: "#a9a4ff",
+          dim: "#675bff",
+          container: "#9a94ff",
+        },
+        secondary: {
+          DEFAULT: "#00e3fd",
+          dim: "#00d4ec",
+          container: "#006875",
+        },
+        tertiary: {
+          DEFAULT: "#a68cff",
+          container: "#7c4dff",
+        },
+        "on-surface": {
+          DEFAULT: "#e8e2ff",
+          variant: "#ada6ce",
+        },
+        outline: {
+          DEFAULT: "#777196",
+          variant: "#484466",
+        },
+      },
+      fontFamily: {
+        sans: [
+          "var(--font-inter)",
+          "Pretendard",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "system-ui",
+          "sans-serif",
+        ],
+        display: ["var(--font-manrope)", "Pretendard", "sans-serif"],
       },
     },
   },
