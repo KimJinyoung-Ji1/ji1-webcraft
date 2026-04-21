@@ -43,7 +43,7 @@ const PORTFOLIO = [
   { title: "IT 스타트업", category: "테크·SaaS", type: "기업형" },
   { title: "뷰티샵 예약", category: "미용·뷰티", type: "프리미엄" },
   { title: "카페 브랜드", category: "음식점·카페", type: "랜딩형" },
-  { title: "패션 쇼핑몰", category: "패션·��류", type: "커머스" },
+  { title: "패션 쇼핑몰", category: "패션·의류", type: "커머스" },
 ];
 
 const PROCESS_STEPS = [
@@ -59,14 +59,14 @@ const REVIEWS = [
   { name: "박○○", role: "건설회사 팀장", text: "업종별 노하우가 풍부해서 소통이 편했습니다. 원하는 방향을 정확히 이해하더군요.", rating: 5 },
   { name: "최○○", role: "한의원 원장", text: "예약 시스템 연동까지 해주셔서 환자 예약 문의가 크게 늘었습니다. 만족합니다.", rating: 5 },
   { name: "정○○", role: "인테리어업체 대표", text: "포트폴리오 배치가 정말 마음에 들었습니다. 고객들이 시공 사례를 보고 바로 연락해요.", rating: 4 },
-  { name: "강○○", role: "어학원 원장", text: "5일 만에 완성해주셨는데 퀄리티가 상상 이상이었���니다. 주변 원장님들께도 추천했어요.", rating: 5 },
+  { name: "강○○", role: "어학원 원장", text: "5일 만에 완성해주셨는데 퀄리티가 상상 이상이었습니다. 주변 원장님들께도 추천했어요.", rating: 5 },
 ];
 
 const FAQS = [
   { q: "제작 기간은 얼마나 걸리나요?", a: "패키지에 따라 다르지만, 라이트(랜딩형)은 5일, 비즈니스는 7~10일, 프리미엄/커머스는 2~3주 내 완성됩니다. 급한 경우 익스프레스 옵션도 있습니다." },
   { q: "추가 비용이 발생하나요?", a: "패키지 가격에 기획·디자인·개발·테스트가 모두 포함되어 있습니다. 도메인(.com 기준 연 15,000원)과 호스팅만 별도이며, 사전에 명확히 안내드립니다." },
   { q: "수정은 몇 번까지 가능한가요?", a: "디자인 단계에서 무제한 수정이 가능합니다. 개발 완료 후에도 A/S 기간 내 무상으로 수정해 드립니다." },
-  { q: "직접 내용을 수정할 수 있나요?", a: "비즈니스 이상 패키지에는 직관적인 관리자 페이지가 포함됩니다. 텍스트, 이미지, 게시글 등�� 코딩 없이 직접 관리할 수 있습니다." },
+  { q: "직접 내용을 수정할 수 있나요?", a: "비즈니스 이상 패키지에는 직관적인 관리자 페이지가 포함됩니다. 텍스트, 이미지, 게시글 등을 코딩 없이 직접 관리할 수 있습니다." },
   { q: "기존 홈페이지 리뉴얼도 가능한가요?", a: "네, 기존 사이트의 콘텐츠를 분석하고 더 효과적인 구조로 리뉴얼해 드립니다. 기존 도메인과 SEO 점수도 유지됩니다." },
 ];
 
@@ -172,7 +172,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <span className="text-[#00e3fd] text-sm font-semibold tracking-widest uppercase font-display">Packages</span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold mt-3">합���적인 가격,<br /><span className="gradient-text">프리미엄 퀄리티</span></h2>
+            <h2 className="font-display text-4xl md:text-5xl font-bold mt-3">합리적인 가격,<br /><span className="gradient-text">프리미엄 퀄리티</span></h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {PACKAGES.map((pkg) => (
@@ -208,7 +208,7 @@ export default function Home() {
             <h2 className="font-display text-4xl md:text-5xl font-bold mt-3"><span className="gradient-text">40+</span> 제작 사례</h2>
           </div>
           <div className="flex justify-center gap-3 mb-12 flex-wrap">
-            {["전체", "랜딩���", "기업형", "프리미엄", "커머스"].map((f) => (
+            {["전체", "랜딩형", "기업형", "프리미엄", "커머스"].map((f) => (
               <button key={f} onClick={() => setFilter(f)} className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${filter === f ? "btn-glow text-[#0e0929]" : "btn-ghost text-[#ada6ce] hover:text-[#e8e2ff]"}`}>{f}</button>
             ))}
           </div>
@@ -333,11 +333,11 @@ export default function Home() {
                 <textarea placeholder="추가 요청사항 (선택)" rows={3} className="w-full px-6 py-4 rounded-xl bg-[#19143a] border border-[#484466]/20 text-[#e8e2ff] placeholder-[#777196] focus:border-[#675bff]/50 focus:outline-none transition-colors resize-none" />
                 <label className="flex items-start gap-3 text-sm text-[#ada6ce] cursor-pointer">
                   <input type="checkbox" className="mt-1 accent-[#a9a4ff]" />
-                  <span>개인정보 수��·이용에 동의합니다</span>
+                  <span>개인정보 수집·이용에 동의합니다</span>
                 </label>
                 <button type="submit" className="w-full btn-glow py-4 rounded-xl text-lg font-bold text-[#0e0929]">무료 견적 받기</button>
               </form>
-              <p className="text-[#ada6ce] text-sm mt-6">또는 전화 상담: <a href="tel:010-0000-0000" className="text-[#00e3fd] hover:underline">010-0000-0000</a></p>
+              <p className="text-[#ada6ce] text-sm mt-6">또는 전화 상담: <span className="text-[#00e3fd]">010-0000-0000</span></p>
             </div>
           </div>
         </div>
